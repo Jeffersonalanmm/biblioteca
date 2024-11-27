@@ -3,11 +3,12 @@ import java.util.Scanner;
 
 public class Biblioteca {
     static Scanner scanner = new Scanner(System.in);
-    static int[] livroAnoPublicacao = new int[30];
+    static Integer[] livroAnoPublicacao = new Integer[30];
     static String[] livrosEmprestados,livroTitulo,livroAutor,usuarioNome = new String[30];
     int contadorIndice = 0;
 
     public static void main(String[] args) {
+
         int op;
 
         do {
@@ -79,7 +80,9 @@ public class Biblioteca {
 
         for(int i = 0; i<livroTitulo.length;i++){
             if(livroTitulo[i].equalsIgnoreCase(titulo)){
-                
+                livroTitulo[i]=null;
+                livroAutor[i]=null;
+                livroAnoPublicacao[i]=null;
             }
         }
 
